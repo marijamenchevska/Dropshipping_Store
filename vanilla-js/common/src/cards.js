@@ -11,7 +11,7 @@ export class CategoryCards {
       document.getElementById("row-container").innerHTML += ` 
             <div class="card shadow border border-0 gen-card-container position-relative overflow-hidden" style="width: 18rem; height: 25rem" id=card-${btnIdNum}>
               <div style="height: 12rem;">
-                <a href="/product-details-page/product-details-page.html" target="_blank">
+                <a href="../product-details-page/product-details-page.html" target="_blank">
                   <img src="${object.img}" id="img-${btnIdNum}" class="card-img-top gen-img-size go-to-details" alt="Image of ${object.name}">
                 </a>
               </div>
@@ -19,7 +19,7 @@ export class CategoryCards {
               <div class="card-body d-flex flex-column justify-content-between gen-card-body">
                 <div>
                   <div class="d-flex align-items-center justify-content-center" style="height:2rem">
-                    <a href="/product-details-page/product-details-page.html" target="_blank"><h6 id="title-${btnIdNum}" class="card-title mb-0 gen-card-title go-to-details">${object.name}</h6></a>
+                    <a href="../product-details-page/product-details-page.html" target="_blank"><h6 id="title-${btnIdNum}" class="card-title mb-0 gen-card-title go-to-details">${object.name}</h6></a>
                   </div>
                   <hr class="my-2 border-2">
                   <p class="fs-5 d-flex justify-content-center align-items-center">

@@ -26,7 +26,7 @@ const fetchResults = async (query) => {
     searchPage.classList.add("d-none");
     loader.classList.remove("d-none");
 
-    const response = await fetch("/data/products.json");
+    const response = await fetch("../data/products.json");
     const data = await response.json();
 
     loader.classList.add("d-none");

@@ -1,24 +1,24 @@
 const html = {
-	cartContainer: document.getElementById('cart-container'),
-	totalPriceContainer: document.getElementById('total-price'),
-	cartListContainer: document.getElementById('cart-list'),
-	emptyCartContainer: document.getElementById('empty-cart'),
+  cartContainer: document.getElementById("cart-container"),
+  totalPriceContainer: document.getElementById("total-price"),
+  cartListContainer: document.getElementById("cart-list"),
+  emptyCartContainer: document.getElementById("empty-cart"),
 };
 
 function handleLocalStorage(products) {
-	localStorage.removeItem('cartItems');
-	localStorage.setItem('cartItems', JSON.stringify(products));
+  localStorage.removeItem("cartItems");
+  localStorage.setItem("cartItems", JSON.stringify(products));
 }
 
 function printProducts(products) {
-	html.cartContainer.innerHTML = '';
+  html.cartContainer.innerHTML = "";
 
-	products.forEach((product) => {
-		if (product.img === 'undefined') {
-			product.img = './gift-card.jpg';
-		}
+  products.forEach((product) => {
+    if (product.img === "undefined") {
+      product.img = "../assets/cart-assets/gift-card.jpg";
+    }
 
-		html.cartContainer.innerHTML += `
+    html.cartContainer.innerHTML += `
         <div class="cart-card">
 			<div class="section-one">
 				<div class="product-container">
@@ -43,8 +43,8 @@ function printProducts(products) {
 
                 <div class="price-container">
                     <p class="price-number" id="${product.id}-price">$${Number(
-			product.price
-		).toLocaleString()}</p>
+      product.price
+    ).toLocaleString()}</p>
                 </div>
 
                 <div class="remove-container">
@@ -59,110 +59,121 @@ function printProducts(products) {
 			
             <hr class="separator" />
         `;
-	});
+  });
 }
 
 function handleButtons(products) {
-	products.forEach((product) => {
-		const buttonIncrease = document.getElementById(`${product.id}-up`);
-		const buttonDecrease = document.getElementById(`${product.id}-down`);
+  products.forEach((product) => {
+    const buttonIncrease = document.getElementById(`${product.id}-up`);
+    const buttonDecrease = document.getElementById(`${product.id}-down`);
 
-		if (product.quantity > 1) {
-			buttonDecrease.classList.remove('inactivate');
-			buttonDecrease.classList.add('activate');
+    if (product.quantity > 1) {
+      buttonDecrease.classList.remove("inactivate");
+      buttonDecrease.classList.add("activate");
 
-			const productPrice = document.getElementById(`${product.id}-price`);
-			productPrice.innerHTML = `$ ${(product.price * product.quantity).toLocaleString()}`;
-		} else {
-			buttonDecrease.classList.remove('activate');
-			buttonDecrease.classList.add('inactivate');
-		}
+      const productPrice = document.getElementById(`${product.id}-price`);
+      productPrice.innerHTML = `$ ${(
+        product.price * product.quantity
+      ).toLocaleString()}`;
+    } else {
+      buttonDecrease.classList.remove("activate");
+      buttonDecrease.classList.add("inactivate");
+    }
 
-		const buttonRemove = document.getElementById(`${product.id}-remove`);
+    const buttonRemove = document.getElementById(`${product.id}-remove`);
 
-		buttonIncrease.addEventListener('click', () => {
-			product.quantity += 1;
-			const productQuantity = document.getElementById(`${product.id}-quantity`);
-			productQuantity.innerHTML = product.quantity;
+    buttonIncrease.addEventListener("click", () => {
+      product.quantity += 1;
+      const productQuantity = document.getElementById(`${product.id}-quantity`);
+      productQuantity.innerHTML = product.quantity;
 
-			const productPrice = document.getElementById(`${product.id}-price`);
-			productPrice.innerHTML = `$ ${(product.price * product.quantity).toLocaleString()}`;
+      const productPrice = document.getElementById(`${product.id}-price`);
+      productPrice.innerHTML = `$ ${(
+        product.price * product.quantity
+      ).toLocaleString()}`;
 
-			buttonDecrease.classList.remove('inactivate');
-			buttonDecrease.classList.add('activate');
+      buttonDecrease.classList.remove("inactivate");
+      buttonDecrease.classList.add("activate");
 
-			handleLocalStorage(products);
-			handleTotalChange();
-		});
+      handleLocalStorage(products);
+      handleTotalChange();
+    });
 
-		buttonDecrease.addEventListener('click', () => {
-			if (product.quantity == 1) {
-				return;
-			}
+    buttonDecrease.addEventListener("click", () => {
+      if (product.quantity == 1) {
+        return;
+      }
 
-			product.quantity -= 1;
+      product.quantity -= 1;
 
-			if (product.quantity == 1) {
-				buttonDecrease.classList.add('inactivate');
-				buttonDecrease.classList.remove('activate');
-			}
+      if (product.quantity == 1) {
+        buttonDecrease.classList.add("inactivate");
+        buttonDecrease.classList.remove("activate");
+      }
 
-			const productPrice = document.getElementById(`${product.id}-price`);
-			productPrice.innerHTML = `$ ${(product.price * product.quantity).toLocaleString()}`;
+      const productPrice = document.getElementById(`${product.id}-price`);
+      productPrice.innerHTML = `$ ${(
+        product.price * product.quantity
+      ).toLocaleString()}`;
 
-			const productQuantity = document.getElementById(`${product.id}-quantity`);
-			productQuantity.innerHTML = product.quantity;
+      const productQuantity = document.getElementById(`${product.id}-quantity`);
+      productQuantity.innerHTML = product.quantity;
 
-			handleLocalStorage(products);
-			handleTotalChange();
-		});
+      handleLocalStorage(products);
+      handleTotalChange();
+    });
 
-		buttonRemove.addEventListener('click', () => {
-			products = products.filter((fp) => fp.id !== product.id);
+    buttonRemove.addEventListener("click", () => {
+      products = products.filter((fp) => fp.id !== product.id);
 
-			handleLocalStorage(products);
+      handleLocalStorage(products);
 
-			if (products.length === 0) {
-				html.cartListContainer.style.display = 'none';
-				html.emptyCartContainer.style.display = 'flex';
-			} else {
-				printProducts(products);
-				handleButtons(products);
-				handleTotalChange();
-			}
-		});
-	});
+      if (products.length === 0) {
+        html.cartListContainer.style.display = "none";
+        html.emptyCartContainer.style.display = "flex";
+      } else {
+        printProducts(products);
+        handleButtons(products);
+        handleTotalChange();
+      }
+    });
+  });
 
-	function handleTotalChange() {
-		totalPrice = 0;
-		products.forEach((product) => {
-			productPrice = Number(product.price) * product.quantity;
-			totalPrice += productPrice;
-		});
-		html.totalPriceContainer.innerHTML = totalPrice.toLocaleString();
-	}
+  function handleTotalChange() {
+    totalPrice = 0;
+    products.forEach((product) => {
+      productPrice = Number(product.price) * product.quantity;
+      totalPrice += productPrice;
+    });
+    html.totalPriceContainer.innerHTML = totalPrice.toLocaleString();
+  }
 }
 
 function handleCart() {
-	const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+  const cartItems = JSON.parse(localStorage.getItem("cartItems"));
 
-	if (!cartItems || cartItems.length === 0) {
-		html.cartListContainer.style.display = 'none';
-		html.emptyCartContainer.style.display = 'flex';
-		return;
-	}
+  if (!cartItems || cartItems.length === 0) {
+    html.cartListContainer.style.display = "none";
+    html.emptyCartContainer.style.display = "flex";
+    return;
+  }
 
-	cartItems.map((product) => {
-		if (product.discount > 0) {
-			product.price = Number((product.price - (product.price * product.discount) / 100).toFixed(0));
-		}
-	});
+  cartItems.map((product) => {
+    if (product.discount > 0) {
+      product.price = Number(
+        (product.price - (product.price * product.discount) / 100).toFixed(0)
+      );
+    }
+  });
 
-	let totalPrice = cartItems.reduce((acc, product) => acc + Number(product.price), 0);
-	html.totalPriceContainer.innerHTML = totalPrice.toLocaleString();
+  let totalPrice = cartItems.reduce(
+    (acc, product) => acc + Number(product.price),
+    0
+  );
+  html.totalPriceContainer.innerHTML = totalPrice.toLocaleString();
 
-	printProducts(cartItems);
-	handleButtons(cartItems);
+  printProducts(cartItems);
+  handleButtons(cartItems);
 }
 
 handleCart();

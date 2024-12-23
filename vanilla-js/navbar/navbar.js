@@ -40,21 +40,20 @@ const updateBadgesCount = () => {
   const cartCount = getCartItemsCount();
 
   badges.forEach((badge) => {
-    badge.style.opacity = "0";
     if (badge.classList.contains("fav") && favoritesCount > 0) {
       badge.style.opacity = "1";
       badge.innerText = favoritesCount;
     } else if (badge.classList.contains("cart") && cartCount > 0) {
       badge.style.opacity = "1";
       badge.innerText = cartCount;
+    } else {
+      badge.style.opacity = "0";
     }
   });
 };
 
 document.addEventListener("click", (e) => {
-    setTimeout(() => updateBadgesCount(), 100);
-    // updateBadgesCount();
-
+  setTimeout(() => updateBadgesCount(), 100);
 });
 
 updateBadgesCount();
@@ -72,7 +71,7 @@ const performSearch = () => {
     localStorage.setItem("searchValue", searchValue);
     searchInput.value = "";
     searchbar.classList.remove("active-search");
-    window.location.href = "/search-page/search.html";
+    window.location.href = "../search-page/search.html";
   }
 };
 

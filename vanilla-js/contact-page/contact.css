@@ -11,6 +11,7 @@ input,
 textarea {
   font-family: "Rubik ", sans-serif;
 }
+
 #contact-form {
   margin-left: 5%;
   margin-top: 4%;
@@ -221,9 +222,6 @@ textarea.input {
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  background: linear-gradient(45deg, #06255b, #06255b);
-  color: #fff;
-  text-align: center;
   line-height: 35px;
   margin-right: 0.5rem;
   transition: 0.3s;

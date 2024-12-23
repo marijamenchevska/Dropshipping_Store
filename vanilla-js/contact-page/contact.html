@@ -4,49 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
-    <link rel="stylesheet" href="contact.css" />
-    <link rel="stylesheet" href="map.css" />
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="/navbar/navbar.css" type="text/css" />
-    <link rel="stylesheet" href="/footer/footer.css" type="text/css" />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
     />
+    <link rel="stylesheet" href="../navbar/navbar.css" type="text/css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="../footer/footer.css" type="text/css" />
     <link
       rel="icon"
       type="image/x-icon"
-      href="/navbar/hfassets/logo/qin-favicon.png"
+      href="../assets/header-footer/logo/qin-favicon.png"
     />
   </head>
+
   <body>
     <header class="nav-header">
       <nav class="nav-sidebar">
         <ul>
           <li class="mobile-v sale">
-            <a href="/sales-page/sales-page.html">
+            <a href="../sales-page/sales-page.html">
               <span class="nav-sm-icon"
-                ><img src="./hfassets/icons/sale.svg" alt="On sale icon"
+                ><img
+                  src="../assets/header-footer/icons/sale.svg"
+                  alt="On sale icon"
               /></span>
               <span class="nav-item">On sale</span>
             </a>
           </li>
           <li class="mobile-v gift">
-            <a href="/gift-card-page/gift-card.html">
+            <a href="../gift-card-page/gift-card.html">
               <span class="nav-sm-icon"
-                ><img src="./hfassets/icons/gift.svg" alt="Gift Card icon"
+                ><img
+                  src="../assets/header-footer/icons/gift.svg"
+                  alt="Gift Card icon"
               /></span>
               <span class="nav-item">Gift Card</span>
             </a>
           </li>
           <li>
-            <a href="/home-page/home.html">
+            <a href="../home-page/home.html">
               <span class="nav-sm-icon"
-                ><img src="./hfassets/icons/home.svg" alt="Home icon"
+                ><img src="../assets/header-footer/icons/home.svg" alt="Home icon"
               /></span>
               <span class="nav-item">Home</span>
             </a>
@@ -54,15 +53,19 @@
           <li>
             <a href="#">
               <span class="nav-sm-icon"
-                ><img src="./hfassets/icons/info.svg" alt="About us icon"
+                ><img
+                  src="../assets/header-footer/icons/info.svg"
+                  alt="About us icon"
               /></span>
               <span class="nav-item">About us</span>
             </a>
           </li>
           <li>
-            <a href="/contact-page/contact.html">
+            <a href="contact.html">
               <span class="nav-sm-icon"
-                ><img src="./hfassets/icons/contact.svg" alt="Contact icon"
+                ><img
+                  src="../assets/header-footer/icons/contact.svg"
+                  alt="Contact icon"
               /></span>
               <span class="nav-item">Contact</span>
             </a>
@@ -70,7 +73,9 @@
           <li class="nav-sb-drdown language">
             <div class="select">
               <span class="nav-sm-icon"
-                ><img src="./hfassets/icons/language.svg" alt="Language icon"
+                ><img
+                  src="../assets/header-footer/icons/language.svg"
+                  alt="Language icon"
               /></span>
               <span class="selected">EN</span>
               <div class="arrow"></div>
@@ -83,7 +88,7 @@
           <li class="nav-sb-drdown currency">
             <div class="select">
               <span class="nav-sm-icon"
-                ><img src="./hfassets/icons/cash.svg" alt="Currency"
+                ><img src="../assets/header-footer/icons/cash.svg" alt="Currency"
               /></span>
               <span class="selected">USD</span>
               <div class="arrow"></div>
@@ -97,27 +102,31 @@
         <div class="sb-socials">
           <a href="#">
             <span class="icon nav-icon">
-              <img src="./hfassets/icons/instagram-svg.svg" alt="Instagram" />
+              <img
+                src="../assets/header-footer/icons/instagram-svg.svg"
+                alt="Instagram"
+              />
             </span>
           </a>
           <a href="#">
             <span class="icon nav-icon">
-              <img src="./hfassets/icons/gh.svg" alt="GitHub" />
+              <img src="../assets/header-footer/icons/gh.svg" alt="GitHub" />
             </span>
           </a>
           <a href="#">
             <span class="icon nav-icon">
-              <img src="./hfassets/icons/fb.svg" alt="Facebook" />
+              <img src="../assets/header-footer/icons/fb.svg" alt="Facebook" />
             </span>
           </a>
         </div>
       </nav>
+
       <nav class="nav-main">
         <div class="nav-logo">
           <div class="logo">
-            <a href="/home-page/home.html">
+            <a href="../home-page/home.html">
               <img
-                src="./hfassets/logo/qintronics-logo.png"
+                src="../assets/header-footer/logo/qintronics-logo.png"
                 width="180px"
                 height="auto"
                 alt="Qintronics Logo"
@@ -125,6 +134,7 @@
             </a>
           </div>
         </div>
+
         <div class="nav-content">
           <div class="searchbar">
             <input
@@ -136,40 +146,42 @@
             <div class="search-button">
               <img
                 class="closed"
-                src="./hfassets/icons/searchw.svg"
+                src="../assets/header-footer/icons/searchw.svg"
                 alt="Search"
               />
               <img
                 class="open"
-                src="./hfassets/icons/search.svg"
+                src="../assets/header-footer/icons/search.svg"
                 alt="Search"
               />
             </div>
           </div>
           <div class="nav-btns">
-            <a href="/sales-page/sales-page.html" class="nav-btn sale"
+            <a href="../sales-page/sales-page.html" class="nav-btn sale"
               >On Sale</a
             >
-            <a href="/gift-card-page/gift-card.html" class="nav-btn gift"
+            <a href="../gift-card-page/gift-card.html" class="nav-btn gift"
               >Gift Card</a
             >
           </div>
           <div class="nav-link-icons">
             <div class="favourite">
               <a
-                href="/favourites-page/favourites-page.html"
+                href="../favourites-page/favourites-page.html"
                 class="favourites-link"
               >
                 <span class="nav-icon"
-                  ><img src="./hfassets/icons/favorite.svg" alt="Favourites"
+                  ><img
+                    src="../assets/header-footer/icons/favorite.svg"
+                    alt="Favourites"
                 /></span>
                 <span class="badges fav">0</span>
               </a>
             </div>
             <div class="cart">
-              <a href="/cart-page/index.html" class="cart-link">
+              <a href="../cart-page/index.html" class="cart-link">
                 <span class="nav-icon"
-                  ><img src="./hfassets/icons/cart.svg" alt="Cart"
+                  ><img src="../assets/header-footer/icons/cart.svg" alt="Cart"
                 /></span>
                 <span class="badges cart">0</span>
               </a>
@@ -177,14 +189,16 @@
             <div class="login">
               <a href="#" class="login-link">
                 <span class="nav-icon"
-                  ><img src="./hfassets/icons/avatar2.svg" alt="Login"
+                  ><img src="../assets/header-footer/icons/avatar2.svg" alt="Login"
                 /></span>
               </a>
             </div>
             <div class="mobile-v-sb">
               <a href="#" class="sidebar-link">
                 <span id="hbtn" class="nav-icon"
-                  ><img src="./hfassets/icons/hamburger-menu.svg" alt="Menu"
+                  ><img
+                    src="../assets/header-footer/icons/hamburger-menu.svg"
+                    alt="Menu"
                 /></span>
               </a>
             </div>
@@ -192,10 +206,15 @@
         </div>
       </nav>
     </header>
+
     <div id="authModal" class="nav-login">
       <div class="login-content">
         <div class="login-header">
-          <img src="./hfassets/logo/logo-color.png" width="60px" alt="Logo" />
+          <img
+            src="../assets/header-footer/logo/logo-color.png"
+            width="60px"
+            alt="Logo"
+          />
           <h2 class="login-header-text">Have an account?</h2>
         </div>
         <form id="login-form" class="auth-form">
@@ -260,7 +279,7 @@
 
     <div class="container">
       <span class="big-circle"></span>
-      <img src="img/shape.png" class="square" alt="" />
+      <img src="../assets/contact/shape.png" class="square" alt="" />
       <div class="form">
         <div class="contact-info">
           <h3 class="title">Let's get in touch</h3>
@@ -274,17 +293,17 @@
 
           <div class="info">
             <div class="information">
-              <img src="img/location.png" class="icon" alt="" />
+              <img src="../assets/contact/location.png" class="icon" alt="" />
               <p>Qintronics 11th October St. 33A, Skopje 1000</p>
             </div>
             <div class="information">
-              <img src="img/email.png" class="icon" alt="" />
+              <img src="../assets/contact/email.png" class="icon" alt="" />
               <p>
                 <a href="mailto:info@yoursite.com">qintronics@project.com</a>
               </p>
             </div>
             <div class="information">
-              <img src="img/phone.png" class="icon" alt="" />
+              <img src="../assets/contact/phone.png" class="icon" alt="" />
               <p><a href="tel://1234567920">+ 1235 2355 98</a></p>
             </div>
           </div>
@@ -293,16 +312,16 @@
             <p>Connect with us :</p>
             <div class="social-icons">
               <a href="https://www.facebook.com" target="_blank">
-                <i class="fab fa-facebook-f"></i>
+                <img src="../assets/contact/square-facebook-brands-solid.svg" alt="" />
               </a>
               <a href="https://x.com/?lang=en" target="_blank">
-                <i class="fab fa-twitter"></i>
+                <img src="../assets/contact/x-twitter-brands-solid.svg" alt="" />                
               </a>
               <a href="https://www.instagram.com/" target="_blank">
-                <i class="fab fa-instagram"></i>
+                <img src="../assets/contact/square-instagram-brands-solid.svg" alt="" />             
               </a>
               <a href="https://mk.linkedin.com/" target="_blank">
-                <i class="fab fa-linkedin-in"></i>
+                <img src="../assets/contact/linkedin-brands-solid.svg" alt="" />               
               </a>
             </div>
           </div>
@@ -358,58 +377,59 @@
     </form>
 
     <footer>
-      <div class="address" id="nav6">
-        <img
-          src="/footer/logo/qintronics-high-resolution-logo-transparent.png"
-          alt="Shop Logo"
-        />
+			<div class="address" id="nav6">
+			  <img
+				src="../assets/header-footer/logo/qintronics-logo.png"
+				alt="Shop Logo"
+			  />
+			  <ul class="lists">
+				<li id="street-name">11th October St. 33A, 1000 Skopje, Macedonia</li>
+				<li>info@qintronics.com</li>
+				<li>+389 70 001 001</li>
+			  </ul>
+			</div>
+			<div class="links">
+			  <h3>Shopping & Categories</h3>
+			  <ul class="lists">
+				<li id="category-link"><a href="../category-page/category-page.html">Categories</a></li>
+				<li><a href="../favourites-page/favourites-page.html">Favorites</a></li>
+				<li><a href="../cart-page/index.html">Cart</a></li>
+			  </ul>
+			</div>
+			<div class="links">
+			  <h3>Useful links</h3>
+			  <ul class="lists">
+				<li><a href="../home-page/home.html">Homepage</a></li>
+				<li><a href="">About us</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			  </ul>
+			</div>
+			<div class="links">
+			  <h3>Help & Information</h3>
+			  <ul class="lists">
+				<li><a href="">Help</a></li>
+				<li><a href=""></a>Shipping</li></li>
+				<li><a href=""></a>Tracking ID</a></li>
+			  </ul>
+			</div>
+			<div class="payments">
         <ul class="lists">
-          <li id="street-name">11th October St. 33A, 1000 Skopje, Macedonia</li>
-          <li>info@qintronics.com</li>
-          <li>+389 70 001 001</li>
+        <li><img src="../assets/header-footer/icons/mastercard-footer.svg" alt="" /></li>
+        <li><img src="../assets/header-footer/icons/amex-footer.svg" alt="" /></li>
+        <li><img src="../assets/header-footer/icons/paypal-footer.svg" alt="" /></li>
+        <li><img src="../assets/header-footer/icons/visa-footer.svg" alt="" /></li>
+        <li><img src="../assets/header-footer/icons/diners-footer.svg" alt="" /></li>
         </ul>
       </div>
-      <div class="links">
-        <h3>Shopping & Categories</h3>
-        <ul class="lists">
-          <li><a href="/category-page/category-page.html">Categories</a></li>
-          <li><a href="/favourites-page/favourites-page.html">Favorites</a></li>
-          <li><a href="/cart-page/index.html">Cart</a></li>
-        </ul>
-      </div>
-      <div class="links">
-        <h3>Useful links</h3>
-        <ul class="lists">
-          <li><a href="/home-page/home.html">Homepage</a></li>
-          <li><a href="/contact-page/contact.html">About us</a></li>
-          <li><a href="/contact-page/contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="links">
-        <h3>Help & Information</h3>
-        <ul class="lists">
-          <li><a href="">Help</a></li>
-          <li><a href="">Shipping</a></li>
-          <li><a href="">Tracking ID</a></li>
-        </ul>
-      </div>
-      <div class="payments">
-        <ul class="lists">
-          <li><img src="/footer/Assets/mastercard-footer.svg" alt="" /></li>
-          <li><img src="/footer/Assets/amex-footer.svg" alt="" /></li>
-          <li><img src="/footer/Assets/paypal-footer.svg" alt="" /></li>
-          <li><img src="/footer/Assets/visa-footer.svg" alt="" /></li>
-          <li><img src="/footer/Assets/diners-footer.svg" alt="" /></li>
-        </ul>
-      </div>
-      <div class="copyrights">
-        © <span id="year"></span> Qintronics, Qinshift Academy G1, G3. All
-        rights reserved.
-      </div>
-    </footer>
+			<div class="copyrights">
+			  © <span id="year"></span> Qintronics, Qinshift Academy G1, G3. All
+			  rights reserved.
+			</div>
+		</footer>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../navbar/navbar.js"></script>
     <script src="contact.js"></script>
-    <script src="/navbar/navbar.js"></script>
-    <script src="/footer/footer.js"></script>
+    <script src="../footer/footer.js"></script>
   </body>
 </html>

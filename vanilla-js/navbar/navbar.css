@@ -15,7 +15,6 @@ header * {
   top: 0;
   width: 100%;
   background-color: #1a3f6b;
-  /* border-bottom: 2px solid #1bd8c4; */
   z-index: 99;
 }
 
@@ -31,7 +30,6 @@ header * {
   top: 0;
   right: 0;
   width: 15rem;
-  /* height: 100vh; */
   padding: 0.4rem 0.8rem;
   background-color: #1a3f6b;
   flex-direction: column;
@@ -322,6 +320,7 @@ header * {
   text-align: center;
   font-size: 0.8rem;
   line-height: normal;
+  opacity: 0;
 }
 
 .nav-login {
@@ -461,11 +460,7 @@ header * {
     display: block;
   }
   .mobile-v a {
-    background: linear-gradient(90deg, #102e62, #1bd8c4);
     font-weight: 600;
-  }
-  .mobile-v.sale {
-    display: none;
   }
   .nav-btn.gift {
     display: none;
@@ -520,5 +515,9 @@ header * {
   }
   .search-button .open {
     display: block;
+  }
+  .sb-socials {
+    padding-left: 5%;
+    padding-bottom: 3%;
   }
 }

@@ -1,6 +1,6 @@
 export class CategoryApi {
   static async getProducts(categoryInfoObject) {
-    const res = await fetch("/data/products.json");
+    const res = await fetch("../data/products.json");
     const parsedRes = await res.json();
 
     if (categoryInfoObject.category) {

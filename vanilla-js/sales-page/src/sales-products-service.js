@@ -6,7 +6,6 @@ import { EventFunctions } from "../../common/src/event-functions.js";
 
 export class SalesProdService {
   constructor() {
-    this.documentTitle = document.getElementById("document-title");
     this.navManipulation = new SalesNavService();
     this.loader = document.getElementById("loader");
     this.salesPage = document.getElementById("sales-page");

@@ -11,8 +11,6 @@ export class FavouritesPageService {
   }
 
   createFirstFavPage() {
-    // const favouriteItems = JSON.parse(localStorage.getItem("favItems"));
-
     if (!this.favouriteItems || this.favouriteItems.length === 0) {
       this.emptyFavourites.style.display = "flex";
       this.favouritesPageContainer.classList.remove(

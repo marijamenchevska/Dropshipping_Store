@@ -18,7 +18,7 @@ h1 {
 }
 
 /* Form styles */
-form {
+#giftCardForm {
   display: flex;
   flex-direction: column;
   max-width: 600px;
@@ -54,7 +54,7 @@ textarea:focus {
 }
 
 /* Form border removal */
-form {
+#giftCardForm {
   border: none;
 }
 

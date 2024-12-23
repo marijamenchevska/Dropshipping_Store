@@ -156,7 +156,6 @@ function setupInputFieldFocus() {
 // Setup form validation for card selection
 function setupFormValidation() {
   const form = document.querySelector("#giftCardForm");
-  console.log("form", form);
 
   if (!form) return;
 
