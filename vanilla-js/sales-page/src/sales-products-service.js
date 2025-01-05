@@ -25,7 +25,7 @@ export class SalesProdService {
     this.page = 1;
     this.firstProductIndex = 0;
     this.lastProductIndex = "";
-    this.productsPerPage = 10;
+    this.productsPerPage = 12;
     this.totalPages = "";
     this.allProducts = [];
     this.currentProducts = [];
@@ -33,7 +33,7 @@ export class SalesProdService {
 
   async createFirstCategoryPage() {
     // The products are not sorted in any way the first time the category is opened, they are taken as they are in the database
-    this.lastProductIndex = 10;
+    this.lastProductIndex = 12;
 
     this.salesPage.classList.add("d-none");
     this.loader.classList.remove("d-none");
